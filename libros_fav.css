@@ -1,0 +1,289 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #B8CCD9;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/fondo/biblioteca.jpg');
+}
+
+header {
+    background-color: #470c1c;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-style: italic;
+    color: white;
+    
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color 0.3s;
+    font-size: large;
+    background: linear-gradient(90deg, #5a2c91, #4e77c8);
+
+}
+
+nav ul li a:hover {
+    background: linear-gradient(90deg, rgba(128, 128, 128, 0.3), rgba(70, 130, 180, 0.5)); /* Plomo y azul con transparencia */
+    transform: scale(1.03); /* Incremento sutil del tamaño */
+    box-shadow: 0px 4px 6px rgba(111, 159, 174, 0.3); /* Sombra ligera y menos brillante */
+    color: white; /* Mantener color de texto */
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+    #menu {
+        display: none; /* Ocultar menú por defecto */
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        background-color: #400615; /* Fondo para el menú desplegable */
+        background-image: url('img/fondo/biblioteca.jpg');
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+        text-align: center;
+        background-color: #400615;
+        
+        
+        border-radius: 5px;
+    }
+
+    #menu.show {
+        display: flex; /* Cambiar de 'none' a 'flex' para que aparezca */
+    }
+
+    .book-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+        grid-gap: 20px; /* Espacio entre las columnas y filas */
+        padding: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .book-card {
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 16px;
+        background-color: rgba(0, 0, 0, 0.6);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+    
+
+
+      nav ul li {
+        
+        margin-bottom: 10px; /* Agrega espacio entre cada elemento de la lista */
+    }
+    
+}
+
+
+nav ul.show {
+    display: flex;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+    grid-gap: 20px; /* Espacio entre las columnas y filas */
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.book-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-item h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.book-description {
+    font-size: 16px;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #470c1c;
+    color: white;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    .book-list {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    transform: translateY(-5px);
+    background-color: #555;
+}
+
+.book-card {
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+  }
+
+
+  
+  .book-card img {
+    max-width: 100%;
+    height: auto;
+    margin: 16px 0;
+    border-radius: 4px;
+  }
+  .book-image {
+    width: 150px; /* Ancho fijo */
+    height: 200px; /* Alto fijo */
+    object-fit: cover; /* Recorta o ajusta la imagen para que siempre encaje */
+    margin: 16px 0;
+    border-radius: 4px;
+    
+  }
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0; /* Espacio entre la paginación y los elementos cercanos */
+}
+
+.pagination .page-number {
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    background-color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination .page-number:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.pagination .page-number.active {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+.centered-section.books {
+    display: flex; /* Para activar el flexbox */
+    flex-direction: column; /* Alineamos elementos en columna */
+    align-items: center; /* Centrado horizontal de los hijos */
+    justify-content: center; /* Centrado vertical de los hijos */
+    text-align: center; /* Asegura que el texto también se centre */
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #feae96); /* Gradiente cálido */
+    color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 600px;
+    height: auto; /* Adaptativo según el contenido */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto; /* Centrado horizontal dentro del contenedor general */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.centered-section.books h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.centered-section.books .section-description {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.centered-section.books .explore-button {
+    background-color: #ffe28a;
+    color: #5a2c14;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.centered-section.books .explore-button:hover {
+    background-color: #ffdb58;
+    transform: translateY(-2px);
+}

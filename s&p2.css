@@ -1,0 +1,273 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: White;
+    background-image: url('img/fondo/himym2.avif');
+    background-size: cover;  /* Hace que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Mantiene la imagen fija mientras se hace scroll */
+   
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #470c1c;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-style: italic;
+    color: white;
+    
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+    
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color 0.3s;
+    font-size: large;
+    background: linear-gradient(90deg, #5a2c91, #4e77c8);
+    
+}
+
+nav ul li a:hover {
+    background: linear-gradient(90deg, rgba(128, 128, 128, 0.3), rgba(70, 130, 180, 0.5)); /* Plomo y azul con transparencia */
+    transform: scale(1.03); /* Incremento sutil del tamaño */
+    box-shadow: 0px 4px 6px rgba(111, 159, 174, 0.3); /* Sombra ligera y menos brillante */
+    color: white; /* Mantener color de texto */
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        margin-top: 20px;
+        padding: 20px;
+        background-image: url('img/fondo/flor.avif');
+        
+    }
+
+    .menu-toggle {
+        display: block;
+        color: white;
+        padding: 10px;
+        
+        background-color: #400615;
+        border: none;
+        cursor: pointer;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        font-size: 18px;
+        background-color: #7D8E94;
+        color: white;
+        
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Agrega espacio entre cada elemento de la lista */
+    }
+
+    
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0; /* Espacio entre la paginación y los elementos cercanos */
+    margin-top: 100px;
+    
+}
+
+.pagination .page-number {
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    background-color: rgb(191, 209, 224);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination .page-number:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.pagination .page-number.active {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul.show {
+    display: flex;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.book-item {
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background-color: rgba(39, 30, 30, 0.6);
+    transition: transform 0.3s ease;
+    text-align: center; /* Centra el contenido dentro del item */
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+}
+
+.book-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.book-description {
+    font-size: 16px;
+    color: white;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #35278C;
+    color: #fff;
+    margin-top: 20px;
+    animation: fadeInFooter 1.5s ease-in-out;
+    background-color: #470c1c;
+
+}
+
+footer p {
+    margin: 0;
+}
+
+.book-video iframe {
+    width: 100%; /* Hace que el video ocupe el 100% del ancho del contenedor */
+    height: 315px; /* Puedes ajustar la altura */
+    border: none; /* Elimina el borde */
+    border-radius: 8px; /* Bordes redondeados para los videos */
+    margin-top: 20px; /* Espacio entre el título y el video */
+    margin-bottom: 20px; /* Espacio después del video */
+}
+
+.centered-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;  /* Deja que el contenedor se ajuste al contenido */
+    padding: 20px;  /* Reduce el padding */
+    background: linear-gradient(to right, #ff7e5f, #feb47b);  /* Mantén el fondo degradado */
+    border-radius: 8px;  /* Menos redondeo en los bordes */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);  /* Sombra más suave */
+    margin: 10px;  /* Reduce el margen */
+    transition: transform 0.3s ease;  /* Mantén la transición */
+}
+
+.centered-section:hover {
+    transform: scale(1.03);  /* Menor expansión al pasar el cursor */
+}
+
+.centered-section h2 {
+    font-size: 24px;  /* Reduce el tamaño de la fuente */
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 15px;  /* Menor separación entre título y párrafo */
+}
+
+.section-description {
+    font-size: 16px;  /* Reduce el tamaño del texto */
+    color: white;
+    line-height: 1.4;
+    max-width: 500px;  /* Menos ancho máximo */
+    margin-bottom: 15px;
+}
+
+.centered-section hr {
+    width: 70%;  /* Hace la línea horizontal más delgada */
+    border: 1px solid white;
+    margin: 8px 0;
+}
+
+
+.center-audio {
+    display: block; /* Convierte el elemento en un bloque */
+    margin: 0 auto; /* Centra horizontalmente */
+    opacity: 0.5;
+}
+
+.book-list {
+    text-align: center; /* Opcional: Centrar el contenido de la sección si lo deseas */
+}
+
+.back-button {
+    font-size: 16px;
+    font-weight: bold;
+    color: black; 
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 20px; /* Ajusta hacia la derecha */
+    padding-left: 20px;
+    margin-top: 20px; /* Mueve hacia abajo */
+    display: inline-block; /* Asegura que se respete el margin */
+    background-color: rgb(191, 209, 224);
+
+}
+
+.back-button:hover {
+    background-color: #383a3d; /* Fondo azul al pasar el mouse */
+    color: white; 
+}

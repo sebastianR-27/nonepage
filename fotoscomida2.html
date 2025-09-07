@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Interactiva</title>
+    <link rel="stylesheet" href="fotos.css">
+    <link rel="icon" href="img/icono/icon2.ico">
+
+</head>
+<body>
+    <header>
+        <h1>Me</h1>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle">
+                &#9776 Menú  ⬇ <!-- Este es el ícono de hamburguesa -->
+            </div>
+            <ul id="menu">
+                <li><a href="index.html">🏠 Inicio</a></li>
+                <li><a href="libros_fav.html">📖 Libros</a></li>
+                <li><a href="series.html">🎥P&S📺</a></li>
+                <li><a href="documentales.html"> 🎞️ Documentales</a></li>
+                <li><a href="fotos.html">📸 Fotos</a></li>
+                
+                
+            </ul>
+        </nav>
+    </header>
+    <script src="javascript/inicio.js"></script>
+
+    <a href="fotoscomida.html" class="back-button">&larr; Volver</a>
+
+    
+    <div class="gallery-container">
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="img/comida/13.jpeg" alt="Descripción 3">
+            <div class="overlay">
+            </div>
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="img/comida/14.jpeg" alt="Descripción 3">
+            <div class="overlay">
+            </div>
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="img/comida/15.jpeg" alt="Descripción 3">
+            <div class="overlay">
+            </div>
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="img/comida/16.jpeg" alt="Descripción 3">
+            <div class="overlay">
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="img/comida/17.jpeg" alt="Descripción 3">
+            <div class="overlay">
+            </div>
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="img/comida/18.jpeg" alt="Descripción 3">
+            <div class="overlay">
+            </div>
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="img/comida/19.jpeg" alt="Descripción 3">
+            <div class="overlay">
+            </div>
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="img/comida/20.jpeg" alt="Descripción 3">
+            <div class="overlay">
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="img/comida/21.jpeg" alt="Descripción 3">
+            <div class="overlay">Nunca debe faltar
+            </div>
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="img/comida/22.jpeg" alt="Descripción 3">
+            <div class="overlay">
+            </div>
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="img/comida/23.jpeg" alt="Descripción 3">
+            <div class="overlay">
+            </div>
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="img/comida/24.jpeg" alt="Descripción 3">
+            <div class="overlay">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="pagination">
+        <a href="fotoscomida.html" class="page-number">1</a>
+        <a href="fotoscomida2.html" class="page-number">2</a>
+        <a href="fotoscomida3.html" class="page-number">3</a>
+        
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modal-img">
+            <div id="modal-caption"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024  | </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+    <script src="javascript/fotos.js"></script>
+</body>
+</html>

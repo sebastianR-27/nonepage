@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.foto {
+    border: 2px solid black;
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.foto img {
+    max-width: 100%;
+    height: auto;
+}
