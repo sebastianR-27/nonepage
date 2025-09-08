@@ -136,6 +136,56 @@ nav ul li a:hover {
     transform: rotate(180deg);
 }
 
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    nav ul {
+        display: none; /* Ocultar menú por defecto */
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        text-align: center;
+        font-size: 1.2rem;
+        background: #eee;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .container {
+        flex-direction: column; /* Sidebar abajo */
+        padding: 10px;
+    }
+
+    .carousel {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .carousel-item h3 {
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}
+
+
 
 @media screen and (max-width: 768px) and (max-width: 1024px){
 
